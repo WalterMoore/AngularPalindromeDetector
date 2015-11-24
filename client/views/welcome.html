@@ -4,6 +4,8 @@
 
 <h3>Enter your word below:</h3>
 
-<input type="text" placeholder="One word, no spaces"></input>
+<input type="text" placeholder="One word, no spaces" ng-model="Data.forwardWord"></input>
 
 <button ng-click="continueToSecond()">Press Me</button>
+
+<h2>{{Data.forwardWord}}</h2>
