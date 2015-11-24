@@ -13,7 +13,7 @@ app.config(['$routeProvider', function ($routeProvider) {
                         controller: "WelcomeController",
                         templateUrl: "views/welcome.html"
                 })
-                .when('/second', {
+                .when('/second/:forwardWord', {
                         controller: 'SecondController',
                         templateUrl: 'views/second.html'
                 })

@@ -1,15 +1,10 @@
-angular.module('PalindromeApp').controller('SecondController', ['$scope', '$location', function ($scope, $location, Data){
+angular.module('PalindromeApp').controller('SecondController', ['$scope', '$location','$routeParams', function ($scope, $location, $routeParams){
 	 	$scope.message = "This is the Second View"
 		console.log("Inside the SecondController");
-
-    	$scope.$watch(function () { return Data.getForwardWord(); }, function (newValue, oldValue) {
-        if (newValue !== oldValue) $scope.forwardWord = newValue;
-    });
-
 		
-		// $scope.switchView = function(view){
-		// 	$location.path(view);
-		// };
+	 
+		$scope.forwardWord = $routeParams.forwardWord;
+		
 		$scope.returnToWelcome = function() {
 		$location.path('/welcome');
 	};
