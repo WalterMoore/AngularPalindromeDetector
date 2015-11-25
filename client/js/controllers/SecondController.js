@@ -4,10 +4,18 @@ angular.module('PalindromeApp').controller('SecondController', ['$scope', '$loca
 		
 	 
 		$scope.forwardWord = $routeParams.forwardWord;
+		$scope.forwardWord = $scope.forwardWord.toLowerCase()
+		$scope.reversedWord = ($scope.forwardWord).split('').reverse().join('');
 		
-		$scope.reversedWord = "hey"
+		
+		if($scope.forwardWord == $scope.reversedWord){
+			$scope.answer = "You've got a palindrome!";
+		}else{
+			$scope.answer = "Not a palindrome. Better luck next time."
+		};
+		
 		
 		$scope.returnToWelcome = function() {
 		$location.path('/welcome');
-	};
+		};
  }]);

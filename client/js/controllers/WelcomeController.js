@@ -3,13 +3,8 @@ angular.module('PalindromeApp').controller('WelcomeController', ['$scope', '$loc
 	console.log("inside WelcomeController")
 	
 		$scope.forwardWord = "";
-	
-	
-	
 		
-		$scope.continueToSecond = function() {
-			$scope.forwardWord.toLowerCase();
-			
+		$scope.continueToSecond = function() {			
 		$location.path('/second/' + $scope.forwardWord);
 	};
 }]);
