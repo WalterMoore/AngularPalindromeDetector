@@ -1,7 +1,4 @@
 var app = angular.module('PalindromeApp', ['ngRoute']);
-console.log("Hi");
-
-
 
 app.config(['$routeProvider', function ($routeProvider) {
         $routeProvider

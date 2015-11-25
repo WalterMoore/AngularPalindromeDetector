@@ -1,20 +1,15 @@
 angular.module('PalindromeApp').controller('SecondController', ['$scope', '$location','$routeParams', function ($scope, $location, $routeParams){
 
-		console.log("Inside the SecondController");
-		
-	 
 		$scope.forwardWord = $routeParams.forwardWord;
-		$scope.forwardWord = $scope.forwardWord.toLowerCase()
+		$scope.forwardWord = $scope.forwardWord.toLowerCase();
 		$scope.reversedWord = ($scope.forwardWord).split('').reverse().join('');
-		
-		
+			
 		if($scope.forwardWord == $scope.reversedWord){
 			$scope.answer = "You've got a palindrome!";
 		}else{
 			$scope.answer = "Not a palindrome. Better luck next time."
 		};
-		
-		
+			
 		$scope.returnToWelcome = function() {
 		$location.path('/welcome');
 		};
